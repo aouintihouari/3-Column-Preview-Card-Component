@@ -1,0 +1,129 @@
+:root {
+  --primary-bright-orange: hsl(31, 77%, 52%);
+  --primary-dark-cyan: hsl(184, 100%, 22%);
+  --primary-very-dark-cyan: hsl(179, 100%, 13%);
+  --neutral-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --neutral-very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Lexend Deca";
+  background-color: var(--neutral-very-light-gray);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 70%;
+  height: 70%;
+}
+
+.container .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2.15rem;
+}
+
+.card-content__image {
+  max-width: 3rem;
+}
+
+.card-content__title {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "Big Shoulders Display";
+  color: var(--neutral-very-light-gray);
+}
+
+.card-content__description {
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 1rem;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.sedans {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.luxury {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.btn {
+  background-color: var(--neutral-very-light-gray);
+  border: none;
+  padding: 0.8rem;
+  border-radius: 3rem;
+  width: 60%;
+  margin-left: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn:hover {
+  color: var(--neutral-very-light-gray);
+  border: 1px solid var(--neutral-very-light-gray);
+  cursor: pointer;
+}
+
+.btn-bright-orange {
+  color: var(--primary-bright-orange);
+}
+
+.btn-dark-cyan {
+  color: var(--primary-dark-cyan);
+}
+
+.btn-very-dark-cyan {
+  color: var(--primary-very-dark-cyan);
+}
+
+.bright-orange,
+.btn-bright-orange:hover {
+  background-color: var(--primary-bright-orange);
+}
+
+.dark-cyan,
+.btn-dark-cyan:hover {
+  background-color: var(--primary-dark-cyan);
+}
+
+.very-dark-cyan,
+.btn-very-dark-cyan:hover {
+  background-color: var(--primary-very-dark-cyan);
+}
+
+@media (max-width: 27rem) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
+
+  .sedans {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+  }
+
+  .luxury {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+}
